@@ -1,0 +1,277 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@media screen and (min-width:680px) {
+  body{
+    color: #00DA45;
+    font-family: "Lato","Noto Sans TC", sans-serif;
+  }
+
+  a{
+    color: #00DA45;
+    text-decoration: none;
+  }
+
+  #container{
+    width: 100%;
+    position: relative;
+  }
+  #index{
+    position: relative;
+    margin-top: 12%; 
+  }
+  #logo{
+    width: 25%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    transition: 1s;
+    transition-timing-function: ease;
+  }
+
+  #logo.move{
+    left: 30%;
+  }
+
+  #introduction{
+    position: absolute;
+    color: #00DA45;
+    margin-left: 50%;
+    opacity: 0;
+  }
+
+  #introduction.move{
+    animation: fade-in 2s ease 300ms 1; 
+    animation-fill-mode:forwards;
+  }
+
+  /*introduction*/
+  h1{
+    font-size: 7vh;
+    font-weight: 700;
+    margin: 3px 0px 3px 0px;
+    color: #00DA45;
+  }
+
+  h2{
+    font-size: 5vh;
+    color: #00DA45;
+    font-weight: 700;
+  }
+
+  h4{
+    font-size: 3vh;
+    font-weight: 400;
+  }
+
+  p,pre{
+    font-size: 2.5vh;
+    margin: 8px 0px 8px 0px;
+    font-weight: 300;
+    color: #00a537;
+  }
+
+  hr{
+    border: 1.5px solid #00DA45;
+    width: 50%;
+    margin-top:450px;
+  }
+  .co-maker{
+    font-size: 3vh;
+  }
+  /*navbar*/
+  #circle{
+    width:60px;
+    height:60px;
+    border-radius:0 0 60px 0;
+    background-color: #00DA45;
+  }
+
+  .reflect{
+    transform: scaleX(-1);
+  }
+
+  #navbar{
+    position: relative;
+    text-align: center;
+    z-index: 3;
+  }
+
+  #navbar ul {
+    display: inline-block;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+/*  #navbar ul::before{
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, white 100%, transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.2s ease;
+  }
+
+  #navbar ul:hover::before{
+    --size: 80px;
+  }*/
+
+  #navbar li {
+    float: left;
+  }
+
+  #navbar li a {
+    background-color: #00DA45;
+    display: block;
+    color: white;
+    padding: 18px 20px;
+    text-decoration: none;
+  }
+
+  #navbar li a:hover {
+    color: #00a537;
+  }
+
+  #navbar li img{
+    width: 15px;
+  }
+
+  #navbar li a image :hover {
+    color: #333;
+  }
+
+  #contact{
+    margin: 10px;
+    height: 30px;
+  }
+
+  #contact li{
+    width: 25px;
+    padding: 5px;
+    float: left;
+  }
+
+  .select{
+    margin-top: 40px;
+    text-align: center;
+  }
+  .btnselect{
+    margin: 30px;
+  }
+  .oselect{
+    width: 10px;
+    margin-right: 5px;
+  }
+  
+  /*fadeIn*/
+  @keyframes fade-in{  
+    0%{ opacity: 0;}
+    100%{opacity:1;}
+  }
+
+  /*illustration*/
+  .works-items{
+    margin-top: 130px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .col-work{
+    float: left;
+    width: 24%;
+    height: 0; 
+    padding: 10px 5px;
+    padding-bottom: 15%;
+    overflow: hidden;
+  }
+  .container{
+    position: relative;
+    margin: 0 auto;
+  }
+  .animate{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .col-animate{
+    margin-top: 20px;
+  }
+  .date{
+    float: right;
+    margin-top: 10px;
+    display: inline-block;
+    color: white;
+    background-color: #00DA45;
+    padding: 2px 10px;
+  }
+  .film{
+    float: left;
+    width: 55%;
+  }
+
+  #detail{
+    float: left;
+    width: 43%;
+    margin-top: 40px;
+    margin-left: 2%;
+    overflow: hidden;
+  }
+
+  #detail.more{
+    float: left;
+    width: 43%;
+    margin-top: 60px;
+    margin-left: 2%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    height: 80;
+  }
+
+  #btnmore, #btnless{
+    color: white;
+    margin-left: 90%;
+    background-color: #00DA45;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    z-index: 2;
+  }
+  #btnless.none{
+    display: none;
+  }
+  #btnmore.none{
+    display: none;
+  }
+
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container iframe{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width:680px) {
+  #logo{
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+
